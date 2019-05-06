@@ -7,6 +7,7 @@ application up and running.
 
 * In terminal change directory for project e.g. `$ cd project_folder/`
 * Install project dependecies with `$ bundle install`
+* Run migrates of DataBase with `$ rails db:migrate`
 * Run app with `$ rails server`
 
 Things you may want to cover:
