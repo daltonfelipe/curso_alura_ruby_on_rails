@@ -1,9 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @departamento.nome %>
-</p>
+<table class="table table-bordered table-hover text-center">
+  <thead>
+    <td>Nome</td>
+      <td>Descrição</td>
+      <td>Departamento</td>
+      <td>Preço</td>
+      <td>Quantidade</td>
+      <td colspan="2">Ações</td>
+  </thead>
+  <tbody>
+    <%= render @produtos_por_departamento %>
+  </tbody>
+</table>
 
-<%= link_to 'Edit', edit_departamento_path(@departamento) %> |
-<%= link_to 'Back', departamentos_path %>
+
+<div class="row col-sm-9">
+  <div class="btn-group">
+    <%= link_to 'Voltar', departamentos_path, class:"btn btn-default" %>
+    <%= link_to 'Editar departamento', edit_departamento_path(@departamento), class:"btn btn-default" %>
+  </div>
+</div>
+

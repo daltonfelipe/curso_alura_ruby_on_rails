@@ -3,27 +3,15 @@
     <tr>
       <td>Nome</td>
       <td>Descrição</td>
+      <td>Departamento</td>
       <td>Preço</td>
       <td>Quantidade</td>
-      <td>Ações</td>
+      <td colspan=2>Ações</td>
     </tr>
   </thead>
   <tbody>
     <% if @produtos.size > 0 %>
-      <% @produtos.each do |produto| %>
-        <tr>
-          <td><%= produto.nome %></td>
-          <td><%= produto.descricao %></td>
-          <td><%= produto.preco %></td>
-          <td><%= produto.quantidade %></td>
-          <td>
-            <%= button_to "Remover", produto, 
-              method: :delete, class: "btn btn-danger",
-              data: {confirm: "Tem certeza que deseja remover o produto #{produto.nome}?"}
-            %>
-          </td>
-        </tr>
-      <% end %>
+      <%= render @produtos %>
     <% else %>
       <tr>
         <td colspan=5>Nenhum produto encontrado</td>
@@ -32,3 +20,4 @@
   </tbody>
   
 </table>
+
